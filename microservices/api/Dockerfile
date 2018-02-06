@@ -1,6 +1,6 @@
-FROM mhart/alpine-node:8
+FROM mhart/alpine-node:9.5.0
 
-RUN apk add --no-cache git
+RUN apk add --no-cache git default-jre-headless build-essential python-pip
 
 WORKDIR /src
 
