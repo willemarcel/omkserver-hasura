@@ -1,6 +1,8 @@
 FROM beevelop/nodejs-python
 
+RUN apt-get update
 RUN apt-get install git default-jre-headless build-essential python-pip
+RUN rm -rf /var/lib/apt/lists/*
 
 WORKDIR /src
 
