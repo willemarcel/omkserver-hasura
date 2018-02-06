@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:7.6.0
+FROM mhart/alpine-node:8
 
 RUN apk add --no-cache git
 
@@ -7,7 +7,7 @@ WORKDIR /src
 RUN git clone https://github.com/hotosm/OpenMapKitServer.git .
 RUN git checkout auth-login
 #install node modules
-RUN npm install --production
+RUN yarn install
 
 # Add app source files
 ADD . /src
