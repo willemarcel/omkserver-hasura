@@ -7,7 +7,7 @@ WORKDIR /src
 RUN git clone https://github.com/hotosm/OpenMapKitServer.git .
 RUN git checkout auth-login
 #install node modules
-RUN yarn install
+RUN npm install --production
 
 # Add app source files
 ADD . /src
