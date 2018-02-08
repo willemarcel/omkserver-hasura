@@ -2,7 +2,7 @@
 
 ## What does this come with?
 
-* Express.js Hello World
+* OpenMapKitServer
 * Deployed with node server
 * **Dockerfile** (automatically used by Hasura for deployment)
 
