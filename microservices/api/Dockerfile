@@ -8,8 +8,8 @@ WORKDIR /src
 
 RUN git clone -b react-frontend --single-branch https://github.com/hotosm/OpenMapKitServer.git .
 # install python dependencies
-git submodule init
-git submodule update
+RUN git submodule init
+RUN git submodule update
 RUN pip install -r requirements.txt
 # install node modules
 RUN npm install
