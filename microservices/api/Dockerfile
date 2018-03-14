@@ -7,9 +7,11 @@ RUN rm -rf /var/lib/apt/lists/*
 WORKDIR /src
 
 RUN git clone https://github.com/hotosm/OpenMapKitServer.git .
-RUN git checkout auth-login
-RUN git pull origin auth-login
-#install node modules
+RUN git checkout react-frontend
+RUN git pull origin react-frontend
+# install python dependencies
+RUN pip install -r requirements.txt
+# install node modules
 RUN npm install
 
 # Add app source files
