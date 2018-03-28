@@ -7,6 +7,7 @@ RUN rm -rf /var/lib/apt/lists/*
 WORKDIR /src
 
 RUN git clone -b react-frontend --single-branch https://github.com/hotosm/OpenMapKitServer.git .
+
 # install python dependencies
 RUN git submodule init
 RUN git submodule update
